@@ -11,8 +11,10 @@ body{
     width: 100vw;
     margin: 0;
     display: grid;
-    /* background: url(https://i.postimg.cc/L4b0B3Dn/301416129-131331166275622-1213609841773912208-n.jpg); */
-    /* background-size: cover; */
+    background-color: aliceblue;
+    /* background: url(https://i.postimg.cc/RZhC0RbR/301213102-131331469608925-6960949691460459612-n.jpg); */
+    background-size:auto;
+    /* resize: none; */
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -35,7 +37,7 @@ body{
 }
 nav{
     flex: 1;
-    text-align: right;
+    /* text-align: right; */
 }
 
 ul, li {
@@ -86,6 +88,9 @@ span{
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
 }
+card-text{
+    align-items: center;
+}
 .container{
     height: auto;
 }
@@ -93,3 +98,48 @@ span{
     width: 12vw;
     height: 20vh;
 }
+form {
+    background-color: white;
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.297);
+    justify-content: center;
+    gap: 1.5rem;
+    border-radius: 10px;
+}
+form h2 {
+    text-align: center;
+}
+form input {
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid gray;
+    padding: 0 10px;
+}
+form .gender-container {
+    gap: 2rem;
+}
+form .gender-container span {
+    gap: 1rem;
+}
+form .gender-container,
+form .gender-container span  {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    color: black;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 5px;
+    padding: 10px;margin-left: 20px;
+}
+

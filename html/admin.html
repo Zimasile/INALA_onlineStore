@@ -4,12 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>Admin</title>
 </head>
 <body>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Add new items</button>
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLabel">Adding new items</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="../html/products.html">
+                <h2 class="align-content-lg-between">Add new items</h2>
+                <input type="text" name="description" id="description" placeholder="enter the description">
+                <input type="text" name="design" id="design" placeholder="enter the design">
+                <input type="number" name="size" id="size" placeholder="enter the size">
+                <input type="text" name="color" id="color" placeholder="enter the color">
+                <input type="number" name="price" id="price" placeholder="enter the price">
+                <input type="url" name="image-url" id="image-url" placeholder="enter image-url">
+        </div>
+            </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-close" data-bs-dismiss="modal">Close</button>
+          <button class="text-white">Add Item</button>
+        </div>
+    </div>
+  </div>
+
       <table class="table">
             <thead>
               <tr>
@@ -18,73 +47,116 @@
                 <th scope="col">Design</th>
                 <th scope="col">Size</th>
                 <th scope="col">Color</th>
-                <th scope="col">Price</th>
+                <th scope="col">Price (R)</th>
+                <th scope="col">Edit / Delete</th>
               </tr>
             </thead>
-            <!-- <tbody>
+            <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>dress</td>
-                <td>Plus size</td>
+                <td>Dress</td>
+                <td>plus size</td>
                 <td>30-34</td>
-                <td>Purple</td>
-                <td>R1 000</td>
+                <td>purple</td>
+                <td>1 000</td>
+                <td><button type="button" class="btn bg-success"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Edit</button>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title" id="exampleModalLabel">Adding new items</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="../html/products.html">
+                                <h2 class="align-content-lg-between">Add new items</h2>
+                                <input type="text" name="description" id="description" placeholder="enter the description">
+                                <input type="text" name="design" id="design" placeholder="enter the design">
+                                <input type="number" name="size" id="size" placeholder="enter the size">
+                                <input type="text" name="color" id="color" placeholder="enter the color">
+                                <input type="number" name="price" id="price" placeholder="enter the price">
+                                <input type="url" name="image-url" id="image-url" placeholder="enter image-url">
+                        </div>
+                            </form>
+                
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal">Close</button>
+                          <button class="text-white">Add Item</button>
+                        </div>
+                    </div>
+                  </div>
+                <button type="button" class="btn bg-danger">Delete</button></td>
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td>dress</td>
-                <td>Plus size</td>
+                <td>Dress</td>
+                <td>plus size</td>
                 <td>30-34</td>
-                <td>Yellow</td>
-                <td>R1 000</td>
+                <td>yellow</td>
+                <td>1 000</td>
+                <td><button type="button" class="btn bg-success">Edit</button>
+                  <button type="button" class="btn bg-danger">Delete</button></td>
               </tr>
               <tr>
                 <th scope="row">3</th>
-                <td>dress</td>
-                <td>Plus size</td>
+                <td>Dress</td>
+                <td>plus size</td>
                 <td>30-34</td>
-                <td>Black with white floral</td>
-                <td>R1 000</td>
+                <td>black with white floral</td>
+                <td>1 000</td>
+                <td><button type="button" class="btn bg-success">Edit</button>
+                  <button type="button" class="btn bg-danger">Delete</button></td>
               </tr>
               <tr>
                 <th scope="row">4</th>
-                <td>dress</td>
-                <td>Plus size</td>
+                <td>Dress</td>
+                <td>plus size</td>
                 <td>30-34</td>
-                <td>Black & goldish</td>
-                <td>R1 000</td>
+                <td>Black & gold</td>
+                <td>1 000</td>
+                <td><button type="button" class="btn bg-success">Edit</button>
+                  <button type="button" class="btn bg-danger">Delete</button></td>
               </tr>
               <tr>
                 <th scope="row">5</th>
-                <td>dress</td>
+                <td>Dress</td>
                 <td>Slim</td>
                 <td>26-30</td>
                 <td>Black</td>
-                <td>R1 200</td>
+                <td>1 200</td>
+                <td><button type="button" class="btn bg-success">Edit</button>
+                  <button type="button" class="btn bg-danger">Delete</button></td>
               </tr>
               <tr>
                 <th scope="row">6</th>
-                <td>dress</td>
+                <td>Dress</td>
                 <td>Slim</td>
                 <td>26-30</td>
-                <td>dark-green</td>
-                <td>R1 200</td>
+                <td>Dark green</td>
+                <td>1 200</td>
+                <td><button type="button" class="btn bg-success">Edit</button>
+                  <button type="button" class="btn bg-danger">Delete</button></td>
               </tr>
               <tr>
                 <th scope="row">7</th>
-                <td>dress</td>
+                <td>Dress</td>
                 <td>Slim</td>
                 <td>28-32</td>
                 <td>Orange</td>
-                <td>R1 200</td>
+                <td>1 200</td>
+                <td><button type="button" class="btn bg-success">Edit</button>
+                  <button type="button" class="btn bg-danger">Delete</button></td>
               </tr>
               <tr>
                 <th scope="row">8</th>
-                <td>dress</td>
+                <td>Dress</td>
                 <td>Slim</td>
                 <td>28-32</td>
-                <td>white</td>
-                <td>R1 200</td>
+                <td>White</td>
+                <td>1 200</td>
+                <td><button type="button" class="btn bg-success">Edit</button>
+                  <button type="button" class="btn bg-danger">Delete</button></td>
               </tr>
               <tr>
                 <th scope="row">9</th>
@@ -92,7 +164,9 @@
                 <td>Formal</td>
                 <td>Medium</td>
                 <td>Blue</td>
-                <td>R800</td>
+                <td>900</td>
+                <td><button type="button" class="btn bg-success">Edit</button>
+                  <button type="button" class="btn bg-danger">Delete</button></td>
               </tr>
               <tr>
                 <th scope="row">10</th>
@@ -100,13 +174,17 @@
                 <td>Formal</td>
                 <td>Medium</td>
                 <td>Black</td>
-                <td>R800</td>
+                <td>900</td>
+                <td><button type="button" class="btn bg-success">Edit</button>
+                  <button type="button" class="btn bg-danger">Delete</button></td>
               </tr>
             </tbody>
-          </table>
-    </div> -->
-     
+      </table>
 
-    <script src="./admin.html "></script>
+            <script src="../js/admin.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- <script src="../js/products.js "></script> -->
 </body>
+<footer>copyrights</footer>
 </html>
